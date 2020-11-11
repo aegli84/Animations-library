@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-image: url('./assets/Untitled\ design\ \(1\).svg');
+    background-color: #000000e5;
+    margin: 0;
+    background-size: 210vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+@keyframes load {
+    0% { 
+        width: 0; 
+    }
+    100% { 
+        width: 80%; 
+    }
+}
+
+@keyframes progressAnimation {
+    0%     {width: 5%; background-color:  #f8ce8a;
+    }
+    25%    {width: 25%; background-color:  #f7ba58;
+            
+    }
+    50%    {width: 50%; background-color:  #c0811b;
+            
+    }
+    75%    {width: 75%; background-color: #af6c00;
+        
+}
+    100%    {width: 100%; background-color: #af6c00;
+            
+    }
+}
+
+@keyframes pulse {
+    0% {
+        color: rgb(206, 206, 206);
+    } 
+    10%{
+        color: rgb(119, 118, 118);
+    }
+    50%{
+        color: rgb(77, 77, 77);
+    }
+    100%{
+        color: rgb(168, 168, 168);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1; 
+        content:"25%";
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+        content:"75%";
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+h5 {
+    font-size: 25px;
+    animation: pulse 2s alternate infinite;
+}
+
+p {
+    color: rgb(119, 118, 118);
+    animation: opacity 2s linear alternate infinite;
+}
+.container {
+    margin-left: 7vh;
+    width: 280px;
+    text-align: center;
+}
+
+.progress2 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+}
+
+.progress-moved .progress-bar2 {
+    width: 85%; 
+    background-color: #EF476F;  
+    animation: progressAnimation 6s infinite;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-105px);
+    }
+}
+
+/*.loader {
+    display: inline-block;
+    margin-top: 500px;
+    margin-right: 10vh;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+    animation: animate 1.2s linear infinite;
+}
+
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #f1f1f1;
+    border: solid white 10px;
+    border-radius: 50%;
+}*/
+
+@keyframes move-right {
+    from {
+        left: 70%;
+    }
+
+    to {
+        left: 90%;
+    }
+}
+
+div:nth-of-type(2)> div {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 238, 0, 0.747);
+    border-radius: 50%;
+    animation: move-right 1.5s infinite alternate;
+}
+
+@keyframes move-left {
+    from {
+        right: 70%;
+    }
+
+    to {
+        right: 90%;
+    }
+}
+
+div:nth-of-type(3)> div {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 38, 0, 0.747);
+    border-radius: 50%;
+    animation: move-right 1.7s infinite alternate;
+}
+
+div:nth-of-type(4)> div {
+    position: absolute;
+    margin-left: 15vh;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 255, 179, 0.747);
+    border-radius: 50%;
+    animation: bounce 1s ease-out infinite alternate;
+}
